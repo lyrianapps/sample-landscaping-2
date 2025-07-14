@@ -1,0 +1,126 @@
+"use client";
+
+import { Button, useMediaQuery } from "@relume_io/relume-ui";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import { RxChevronDown } from "react-icons/rx";
+import Link from "next/link";
+
+const useRelume = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 991px)");
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
+  const openOnMobileDropdownMenu = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+  const openOnDesktopDropdownMenu = () => {
+    !isMobile && setIsDropdownOpen(true);
+  };
+  const closeOnDesktopDropdownMenu = () => {
+    !isMobile && setIsDropdownOpen(false);
+  };
+  const animateMobileMenu = isMobileMenuOpen ? "open" : "close";
+  const animateMobileMenuButtonSpan = isMobileMenuOpen
+    ? ["open", "rotatePhase"]
+    : "closed";
+  const animateDropdownMenu = isDropdownOpen ? "open" : "close";
+  const animateDropdownMenuIcon = isDropdownOpen ? "rotated" : "initial";
+  return {
+    toggleMobileMenu,
+    openOnDesktopDropdownMenu,
+    closeOnDesktopDropdownMenu,
+    openOnMobileDropdownMenu,
+    animateMobileMenu,
+    animateMobileMenuButtonSpan,
+    animateDropdownMenu,
+    animateDropdownMenuIcon,
+  };
+};
+
+export function Navbar1() {
+  const useActive = useRelume();
+  return (
+    <section
+      id="relume"
+      className="z-[999] flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%] bg-[#0D291A]"
+    >
+      <div className="w-full lg:flex lg:items-center lg:justify-between text-white py-4 px-4">
+        <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
+          <Link
+            href="#"
+            className="text-3xl font-serif italic font-normal tracking-wide select-none"
+            style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+          >
+            Logo
+          </Link>
+          <button
+            className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+            onClick={useActive.toggleMobileMenu}
+          >
+            {/* ...hamburger icon code... */}
+          </button>
+        </div>
+        <motion.div
+          // ...existing props...
+          className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+        >
+          <Link
+            href="#"
+            className="block py-3 text-lg font-sans first:pt-7 lg:px-4 lg:py-2 lg:text-xl first:lg:pt-2"
+          >
+            Home
+          </Link>
+          <Link
+            href="#"
+            className="block py-3 text-lg font-sans lg:px-4 lg:py-2 lg:text-xl"
+          >
+            Services
+          </Link>
+          <Link
+            href="#"
+            className="block py-3 text-lg font-sans lg:px-4 lg:py-2 lg:text-xl"
+          >
+            Gallery
+          </Link>
+          <div
+            onMouseEnter={useActive.openOnDesktopDropdownMenu}
+            onMouseLeave={useActive.closeOnDesktopDropdownMenu}
+          >
+            <button
+              className="flex w-full items-center justify-between gap-2 py-3 text-left text-lg font-sans lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-xl"
+              onClick={useActive.openOnMobileDropdownMenu}
+            >
+              <span>About Us</span>
+              <motion.span
+                variants={{ rotated: { rotate: 180 }, initial: { rotate: 0 } }}
+                animate={useActive.animateDropdownMenuIcon}
+                transition={{ duration: 0.3 }}
+              >
+                <RxChevronDown />
+              </motion.span>
+            </button>
+            {/* ...dropdown nav... */}
+          </div>
+          <div className="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-8 lg:flex-row">
+            <Button
+              title="Quote"
+              variant="outline"
+              size="lg"
+              className="w-full font-sans text-xl font-normal px-6 py-2 rounded-full border-2 border-[#35543C] bg-transparent text-white hover:bg-[#1a3a25] transition"
+            >
+              Quote
+            </Button>
+            <Button
+              title="Learn More"
+              size="lg"
+              className="w-full font-sans text-xl font-semibold px-6 py-2 rounded-full bg-[#2E8B57] shadow-[0_4px_0_0_#217346] text-white hover:bg-[#217346] transition"
+            >
+              Learn More
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
