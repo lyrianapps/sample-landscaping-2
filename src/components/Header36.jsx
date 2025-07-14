@@ -1,7 +1,9 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
+import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export function Header36() {
   return (
@@ -19,17 +21,25 @@ export function Header36() {
           vision to life with our expert design and maintenance services.
         </p>
         <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-          <Button title="Button">Button</Button>
-          <Button title="Button" variant="secondary">
-            Button
-          </Button>
+          <Link href="tel:3068016781">
+            <Button
+              title="Button"
+              className="text-lg font-semibold px-10 py-3 rounded-full bg-[#2E8B57] shadow-[0_4px_0_0_#217346] text-white hover:bg-[#217346] transition min-w-[140px] border-none"
+              style={{ boxShadow: "0 4px 0 0 #217346" }}
+            >
+              Call
+            </Button>
+          </Link>
         </div>
       </div>
       <div>
-        <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-          alt="Relume placeholder image"
+        <Image
+          alt="Landscaping sample image"
           className="w-full object-cover lg:h-screen lg:max-h-[60rem]"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          src={"/assets/photo-2.avif"}
+          width={1100}
+          height={1100}
         />
       </div>
     </section>

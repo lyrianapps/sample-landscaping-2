@@ -4,6 +4,7 @@ import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { GiGrass } from "react-icons/gi"; // Add this import
+import Image from "next/image";
 
 export function Layout22() {
   return (
@@ -50,8 +51,10 @@ export function Layout22() {
           </div>
 
           <div>
-            <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+            <Image
+              width={500}
+              height={500}
+              src="/assets/photo-6.avif"
               className="w-full rounded-image object-cover"
               alt="Relume placeholder image"
             />

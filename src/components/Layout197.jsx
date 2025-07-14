@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export function Layout197() {
@@ -8,8 +9,10 @@ export function Layout197() {
       <div className="container">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-x-20">
           <div className="order-2 md:order-1">
-            <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+            <Image
+              width={500}
+              height={500}
+              src="/assets/photo-7.avif"
               className="w-full rounded-image object-cover"
               alt="Relume placeholder image"
             />
