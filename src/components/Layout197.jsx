@@ -15,7 +15,10 @@ export function Layout197() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl">
+            <h3
+              className="mb-5 text-4xl font-normal leading-tight md:mb-6 md:text-6xl lg:text-7xl xl:text-[3.5rem]"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
               Discover the Advantages of Choosing Our Expert Landscaping
               Services
             </h3>

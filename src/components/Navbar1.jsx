@@ -43,7 +43,7 @@ export function Navbar1() {
   return (
     <section
       id="relume"
-      className="z-[999] flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%] bg-[#0D291A]"
+      className="z-[999] flex w-full items-center border-b border-border-primary lg:min-h-18 lg:px-[5%] bg-[#0D291A]"
     >
       <div className="w-full lg:flex lg:items-center lg:justify-between text-white py-4 px-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
@@ -67,19 +67,19 @@ export function Navbar1() {
         >
           <Link
             href="#"
-            className="block py-3 text-lg font-sans first:pt-7 lg:px-4 lg:py-2 lg:text-xl first:lg:pt-2"
+            className="block py-3 text-sm first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Home
           </Link>
           <Link
             href="#"
-            className="block py-3 text-lg font-sans lg:px-4 lg:py-2 lg:text-xl"
+            className="block py-3 text-sm lg:px-4 lg:py-2 lg:text-base"
           >
             Services
           </Link>
           <Link
             href="#"
-            className="block py-3 text-lg font-sans lg:px-4 lg:py-2 lg:text-xl"
+            className="block py-3 text-sm lg:px-4 lg:py-2 lg:text-base"
           >
             Gallery
           </Link>
@@ -88,7 +88,7 @@ export function Navbar1() {
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
           >
             <button
-              className="flex w-full items-center justify-between gap-2 py-3 text-left text-lg font-sans lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-xl"
+              className="flex w-full items-center justify-between gap-2 py-3 text-left text-sm lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
               onClick={useActive.openOnMobileDropdownMenu}
             >
               <span>About Us</span>

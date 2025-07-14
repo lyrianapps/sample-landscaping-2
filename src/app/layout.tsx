@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${cormorantGaramond.variable} ${merriweatherSans.variable} antialiased`}
+        style={{ fontFamily: "var(--font-merriweather-sans), sans-serif" }}
       >
         <style>
           {`

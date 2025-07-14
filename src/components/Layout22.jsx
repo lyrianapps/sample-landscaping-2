@@ -31,19 +31,24 @@ export function Layout22() {
               and customer satisfaction.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More" variant="secondary">
+              <Button
+                variant="outline"
+                size="lg"
+                className="font-sans text-base font-normal px-8 py-2 rounded-full border-2 border-[#35543C] bg-transparent text-white hover:bg-[#1a3a25] transition min-w-[150px]"
+              >
                 Learn More
               </Button>
               <Button
-                title="Contact"
-                variant="link"
-                size="link"
                 iconRight={<RxChevronRight />}
+                variant="link"
+                size="lg"
+                className="font-sans text-base font-normal px-2 py-2 rounded-full text-white hover:underline transition"
               >
                 Contact
               </Button>
             </div>
           </div>
+
           <div>
             <img
               src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
