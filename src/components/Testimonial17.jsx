@@ -1,97 +1,113 @@
-"use client";
-
-import { Card } from "@relume_io/relume-ui";
 import React from "react";
-import { BiSolidStar } from "react-icons/bi";
+import { FaStar } from "react-icons/fa";
 
 export function Testimonial17() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Customer Testimonials
-          </h2>
-          <p className="md:text-md">
-            Their attention to detail is unmatched in the industry.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "The team transformed our backyard into a paradise!"
-              </blockquote>
+    <section
+      id="relume"
+      className="px-[5%] py-16 md:py-24 lg:py-28 bg-[#F2F2F2]"
+    >
+      <div className="container max-w-7xl mx-auto">
+        <h2
+          className="mb-8 text-5xl font-normal text-center"
+          style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+        >
+          Customer Testimonials
+        </h2>
+        <p className="mb-10 text-xl font-bold text-center">
+          Transforming my yard into a paradise!
+        </p>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          {/* Testimonial 1 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="flex mb-4 text-[#2E8B57] justify-center">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="mr-1" />
+              ))}
             </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
+            <blockquote
+              className="mb-6 text-2xl font-normal"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              "The team was professional and exceeded my expectations!"
+            </blockquote>
+            <div className="flex items-center gap-3 mb-3 justify-center">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mr-4 md:mb-0"
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Emily Johnson"
+                className="size-14 min-w-14 min-h-14 rounded-full object-cover border-2 border-white"
               />
-              <div>
-                <p className="font-semibold">Emily Johnson</p>
-                <p>Homeowner, Miami</p>
+              <div className="text-left">
+                <p className="font-bold">Emily Johnson</p>
+                <p className="text-sm">Homeowner, Miami</p>
               </div>
             </div>
-          </Card>
-          <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "Exceptional service from start to finish!"
-              </blockquote>
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+              alt="Webflow logo"
+              className="h-6 mx-auto"
+            />
+          </div>
+          {/* Testimonial 2 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="flex mb-4 text-[#2E8B57] justify-center">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="mr-1" />
+              ))}
             </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
+            <blockquote
+              className="mb-6 text-2xl font-normal"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              "Their attention to detail is unmatched!"
+            </blockquote>
+            <div className="flex items-center gap-3 mb-3 justify-center">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mr-4 md:mb-0"
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Michael Smith"
+                className="size-14 min-w-14 min-h-14 rounded-full object-cover border-2 border-white"
               />
-              <div>
-                <p className="font-semibold">Michael Smith</p>
-                <p>Project Manager, ABC Corp</p>
+              <div className="text-left">
+                <p className="font-bold">Michael Smith</p>
+                <p className="text-sm">Manager, GreenScape</p>
               </div>
             </div>
-          </Card>
-          <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
-            <div className="rb-5 mb-5 md:mb-6">
-              <div className="mb-5 flex md:mb-6">
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-                <BiSolidStar className="mr-1 size-6" />
-              </div>
-              <blockquote className="md:text-md">
-                "They exceeded our expectations every step of the way!"
-              </blockquote>
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+              alt="Webflow logo"
+              className="h-6 mx-auto"
+            />
+          </div>
+          {/* Testimonial 3 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="flex mb-4 text-[#2E8B57] justify-center">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="mr-1" />
+              ))}
             </div>
-            <div className="mt-5 flex w-full flex-col items-start md:mt-6 md:w-fit md:flex-row md:items-center">
+            <blockquote
+              className="mb-6 text-2xl font-normal"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              "I highly recommend their services to everyone!"
+            </blockquote>
+            <div className="flex items-center gap-3 mb-3 justify-center">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar"
-                className="mb-4 size-12 min-h-12 min-w-12 rounded-full object-cover md:mr-4 md:mb-0"
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Sarah Lee"
+                className="size-14 min-w-14 min-h-14 rounded-full object-cover border-2 border-white"
               />
-              <div>
-                <p className="font-semibold">Sarah Lee</p>
-                <p>Marketing Director, XYZ Inc</p>
+              <div className="text-left">
+                <p className="font-bold">Sarah Lee</p>
+                <p className="text-sm">Director, Oasis</p>
               </div>
             </div>
-          </Card>
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+              alt="Webflow logo"
+              className="h-6 mx-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

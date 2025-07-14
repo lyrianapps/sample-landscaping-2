@@ -1,17 +1,20 @@
-"use client";
-
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
-
+import { FaLeaf, FaSeedling, FaHandsHelping } from "react-icons/fa";
 export function Layout246() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 lg:mb-20 lg:gap-x-20">
           <div>
-            <h2 className="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl">
-              Our Commitment to Excellence in Every Landscape We Create
+            <h2
+              className="text-5xl leading-[1.2] font-normal md:text-6xl lg:text-7xl mb-6"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              Our Journey: Crafting Beautiful
+              <br />
+              Landscapes Since 2002 in Miami
             </h2>
           </div>
           <div>
@@ -25,12 +28,8 @@ export function Layout246() {
         </div>
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12">
           <div>
-            <div className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-12"
-                alt="Relume logo"
-              />
+            <div className="mb-5 md:mb-6 flex justify-center">
+              <FaLeaf size={48} />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
               Integrity and Transparency in Every Interaction with Our Clients
@@ -45,12 +44,8 @@ export function Layout246() {
             </div>
           </div>
           <div>
-            <div className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-12"
-                alt="Relume logo"
-              />
+            <div className="mb-5 md:mb-6 flex justify-center">
+              <FaSeedling size={48} />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
               Passion for Nature and Design in Every Project We Undertake
@@ -66,12 +61,8 @@ export function Layout246() {
             </div>
           </div>
           <div>
-            <div className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-12"
-                alt="Relume logo"
-              />
+            <div className="mb-5 md:mb-6 flex justify-center">
+              <FaHandsHelping size={48} />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
               Community Engagement and Responsibility Are at Our Core

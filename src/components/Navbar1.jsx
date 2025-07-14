@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { RxChevronDown } from "react-icons/rx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,6 +41,8 @@ const useRelume = () => {
 
 export function Navbar1() {
   const useActive = useRelume();
+  const pathname = usePathname();
+
   return (
     <section
       id="relume"
@@ -61,25 +64,28 @@ export function Navbar1() {
             {/* ...hamburger icon code... */}
           </button>
         </div>
-        <motion.div
-          // ...existing props...
-          className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
-        >
+        <motion.div className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]">
           <Link
             href="about-us"
-            className="block py-3 text-sm lg:px-4 lg:py-2 lg:text-base"
+            className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
+              pathname === "/about-us" ? "text-[#2E8B57] font-semibold" : ""
+            }`}
           >
             About Us
           </Link>
           <Link
             href="services"
-            className="block py-3 text-sm lg:px-4 lg:py-2 lg:text-base"
+            className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
+              pathname === "/services" ? "text-[#2E8B57] font-semibold" : ""
+            }`}
           >
             Services
           </Link>
           <Link
             href="gallery"
-            className="block py-3 text-sm lg:px-4 lg:py-2 lg:text-base"
+            className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
+              pathname === "/gallery" ? "text-[#2E8B57] font-semibold" : ""
+            }`}
           >
             Gallery
           </Link>

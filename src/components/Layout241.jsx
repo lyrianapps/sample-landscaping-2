@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight, RxHome } from "react-icons/rx";
