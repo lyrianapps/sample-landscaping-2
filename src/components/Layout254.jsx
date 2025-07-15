@@ -4,13 +4,21 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Layout254() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="px-[5%] py-16 md:py-24 lg:py-28 bg-[#123722] text-white"
+    >
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Transform</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Exceptional Landscaping Services Tailored for You
+            <h2
+              className="mb-5 text-[2.3rem] md:text-[3rem] lg:text-[3.5rem] font-normal leading-tight"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              Exceptional Landscaping Services
+              <br />
+              Tailored for You
             </h2>
             <p className="md:text-md">
               Our team specializes in creating stunning outdoor spaces that
@@ -97,8 +105,18 @@ export function Layout254() {
           </div>
         </div>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:mt-18 lg:mt-20">
-          <Button variant="secondary">Learn More</Button>
-          <Button iconRight={<RxChevronRight />} variant="link" size="link">
+          <Button
+            className="text-base font-semibold px-8 py-2 rounded-full bg-[#2E8B57] shadow-[0_4px_0_0_#217346] text-white hover:bg-[#217346] transition min-w-[120px] border-none"
+            style={{ boxShadow: "0 4px 0 0 #217346" }}
+          >
+            Learn More
+          </Button>
+          <Button
+            iconRight={<RxChevronRight />}
+            variant="outline"
+            className="text-base font-semibold px-8 py-2 rounded-full border-2 border-[#35543C] bg-transparent text-white hover:bg-[#1a3a25] transition min-w-[120px]"
+            style={{ boxShadow: "0 4px 0 0 #35543C" }}
+          >
             Sign Up
           </Button>
         </div>

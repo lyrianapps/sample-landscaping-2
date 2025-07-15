@@ -6,8 +6,15 @@ export function Layout12() {
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <h1 className="mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl">
-              Comprehensive Garden Maintenance for a Lush, Vibrant Outdoor Space
+            <h1
+              className="mb-5 text-[2rem] md:text-[2.5rem] lg:text-[2.8rem] font-normal leading-tight"
+              style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+            >
+              Comprehensive Garden
+              <br />
+              Maintenance for a Lush, Vibrant
+              <br />
+              Outdoor Space
             </h1>
             <p className="mb-6 md:mb-8 md:text-md">
               Our Garden Maintenance service ensures your landscape remains
