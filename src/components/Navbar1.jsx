@@ -83,6 +83,15 @@ export function Navbar1() {
           </Link>
 
           <Link
+            href="gallery"
+            className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
+              pathname === "/gallery" ? "text-[#2E8B57] font-semibold" : ""
+            }`}
+          >
+            Gallery
+          </Link>
+
+          <Link
             href="contact"
             className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
               pathname === "/contact" ? "text-[#2E8B57] font-semibold" : ""
