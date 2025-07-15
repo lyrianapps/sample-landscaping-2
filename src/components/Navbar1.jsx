@@ -81,13 +81,14 @@ export function Navbar1() {
           >
             Services
           </Link>
+
           <Link
-            href="gallery"
+            href="contact"
             className={`block py-3 text-sm lg:px-4 lg:py-2 lg:text-base ${
-              pathname === "/gallery" ? "text-[#2E8B57] font-semibold" : ""
+              pathname === "/contact" ? "text-[#2E8B57] font-semibold" : ""
             }`}
           >
-            Gallery
+            Contact
           </Link>
 
           <div className="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-8 lg:flex-row">

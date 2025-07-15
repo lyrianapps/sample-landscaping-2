@@ -5,7 +5,10 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Contact14() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="px-[5%] py-16 md:py-24 lg:py-28 bg-[#123722] text-white"
+    >
       <div className="container">
         <div className="rb-12 mb-12 max-w-lg md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Connect</p>
@@ -50,11 +53,12 @@ export function Contact14() {
                 Office
               </h3>
               <p className="mb-2">456 Greenway Ave, Miami FL 33101 USA</p>
-              <div className="mt-5 md:mt-6">
+              <div className="mt-5 md:mt-6 text-white">
                 <Button
                   title="Get Directions"
                   variant="link"
                   size="link"
+                  className="text-white"
                   iconRight={<RxChevronRight />}
                 >
                   Get Directions

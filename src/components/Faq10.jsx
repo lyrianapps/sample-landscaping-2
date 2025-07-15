@@ -11,7 +11,10 @@ import React from "react";
 
 export function Faq10() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="px-[5%] py-16 md:py-24 lg:py-28 bg-[#D8D8D8]"
+    >
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -165,7 +168,11 @@ export function Faq10() {
           </h4>
           <p className="md:text-md">We're here to help you!</p>
           <div className="mt-6 md:mt-8">
-            <Button title="Contact" variant="secondary">
+            <Button
+              title="Contact"
+              className="text-base font-semibold px-6 py-2 rounded-full border-2 border-[#bdbdbd] bg-white text-black shadow-[0_4px_0_0_#bdbdbd] hover:bg-[#f5f5f5] transition min-w-[110px]"
+              style={{ boxShadow: "0 4px 0 0 #bdbdbd" }}
+            >
               Contact
             </Button>
           </div>

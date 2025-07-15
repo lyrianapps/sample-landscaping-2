@@ -9,7 +9,10 @@ export function Contact1() {
       <div className="container max-w-lg">
         <div className="mx-auto mb-8 w-full max-w-lg text-center md:mb-10 lg:mb-12">
           <p className="mb-3 font-semibold md:mb-4">Connect</p>
-          <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2
+            className="mb-5 text-[2.8rem] md:text-[4rem] lg:text-[5rem] font-normal leading-tight"
+            style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
+          >
             Get in Touch
           </h2>
           <p className="md:text-md">
@@ -21,13 +24,21 @@ export function Contact1() {
             <Label htmlFor="name" className="mb-2">
               Name
             </Label>
-            <Input type="text" id="name" />
+            <Input
+              className="w-full rounded-lg border border-[#d6d6d6] bg-white px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#29834b] transition"
+              type="text"
+              id="name"
+            />
           </div>
           <div className="grid w-full items-center">
             <Label htmlFor="email" className="mb-2">
               Email
             </Label>
-            <Input type="email" id="email" />
+            <Input
+              className="w-full rounded-lg border border-[#d6d6d6] bg-white px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#29834b] transition"
+              type="email"
+              id="email"
+            />
           </div>
           <div className="grid w-full items-center">
             <Label htmlFor="message" className="mb-2">
@@ -36,17 +47,26 @@ export function Contact1() {
             <Textarea
               id="message"
               placeholder="Type your message..."
-              className="min-h-[11.25rem] overflow-auto"
+              className="min-h-[11.25rem] overflow-auto rounded-lg border border-[#d6d6d6] bg-white px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#29834b] transition"
             />
           </div>
           <div className="mb-3 flex items-center space-x-2 text-sm md:mb-4">
-            <Checkbox id="terms" />
-            <Label htmlFor="terms" className="cursor-pointer">
+            <Checkbox
+              id="terms"
+              className="w-5 h-5 border-2 border-[#d6d6d6] rounded focus:ring-2 focus:ring-[#29834b] transition"
+            />
+            <Label htmlFor="terms" className="cursor-pointer font-semibold">
               I accept the Terms
             </Label>
           </div>
           <div className="text-center">
-            <Button title="Submit">Submit</Button>
+            <Button
+              title="Submit"
+              className="text-base font-semibold px-8 py-2 rounded-full bg-[#29834b] shadow-[0_4px_0_0_#217346] text-white hover:bg-[#217346] transition min-w-[130px] border-none"
+              style={{ boxShadow: "0 4px 0 0 #217346" }}
+            >
+              Submit
+            </Button>
           </div>
         </form>
       </div>
