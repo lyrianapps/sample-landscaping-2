@@ -1,4 +1,5 @@
 import { Badge } from "@relume_io/relume-ui";
+import Image from "next/image";
 import React from "react";
 
 export function PortfolioHeader3() {
@@ -26,20 +27,22 @@ export function PortfolioHeader3() {
             of our landscape projects.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2 md:mt-6">
-            <Badge>
-              <a href="#">Garden Design</a>
-            </Badge>
-            <Badge>
-              <a href="#">Outdoor Living</a>
-            </Badge>
-            <Badge>
-              <a href="#">Commercial Spaces</a>
-            </Badge>
+            <span className="inline-block px-7 py-2 rounded-full border border-white/20 text-white text-xl font-bold bg-transparent transition-all">
+              Garden Design
+            </span>
+            <span className="inline-block px-7 py-2 rounded-full border border-white/20 text-white text-xl font-bold bg-transparent transition-all">
+              Outdoor Living
+            </span>
+            <span className="inline-block px-7 py-2 rounded-full border border-white/20 text-white text-xl font-bold bg-transparent transition-all">
+              Commercial Spaces
+            </span>
           </div>
         </div>
         <div>
-          <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+          <Image
+            width={1200}
+            height={800}
+            src="/assets/photo-14.avif"
             alt="Relume placeholder image 1"
             className="w-full rounded-image"
           />

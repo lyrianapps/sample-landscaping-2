@@ -1,6 +1,6 @@
 import { Button } from "@relume_io/relume-ui";
+import Image from "next/image";
 import React from "react";
-import { RxChevronRight } from "react-icons/rx";
 
 export function Layout254() {
   return (
@@ -63,10 +63,12 @@ export function Layout254() {
             </div>
           </div>
           <div className="relative order-last w-full sm:col-span-2 lg:order-none lg:col-span-1">
-            <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+            <Image
+              src="/assets/photo-15.avif"
+              width={500}
+              height={500}
+              className="w-full rounded-image object-cover"
               alt="Relume placeholder image"
-              className="h-auto w-full rounded-image object-cover"
             />
           </div>
           <div className="grid w-full grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16">
@@ -110,14 +112,6 @@ export function Layout254() {
             style={{ boxShadow: "0 4px 0 0 #217346" }}
           >
             Learn More
-          </Button>
-          <Button
-            iconRight={<RxChevronRight />}
-            variant="outline"
-            className="text-base font-semibold px-8 py-2 rounded-full border-2 border-[#35543C] bg-transparent text-white hover:bg-[#1a3a25] transition min-w-[120px]"
-            style={{ boxShadow: "0 4px 0 0 #35543C" }}
-          >
-            Sign Up
           </Button>
         </div>
       </div>

@@ -59,14 +59,6 @@ export function Layout16() {
               <Button title="Learn More" variant="secondary">
                 Learn More
               </Button>
-              <Button
-                title="Sign Up"
-                variant="link"
-                size="link"
-                iconRight={<RxChevronRight />}
-              >
-                Sign Up
-              </Button>
             </div>
           </div>
           <div>

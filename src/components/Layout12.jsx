@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import { FaLeaf, FaRegSun } from "react-icons/fa";
 
 export function Layout12() {
   return (
@@ -26,12 +28,8 @@ export function Layout12() {
             </p>
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               <div>
-                <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                <div className="mb-3 md:mb-4 flex">
+                  <FaLeaf className="w-14 h-20 text-[#29834b]" />
                 </div>
                 <h6 className="mb-3 text-md leading-[1.4] font-bold md:mb-4 md:text-xl">
                   Regular Upkeep
@@ -42,12 +40,8 @@ export function Layout12() {
                 </p>
               </div>
               <div>
-                <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                <div className="mb-3 md:mb-4 flex">
+                  <FaRegSun className="w-14 h-20 text-[#29834b]" />
                 </div>
                 <h6 className="mb-3 text-md leading-[1.4] font-bold md:mb-4 md:text-xl">
                   Seasonal Care
@@ -60,8 +54,10 @@ export function Layout12() {
             </div>
           </div>
           <div>
-            <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+            <Image
+              src={"/assets/photo-15.avif"}
+              width={500}
+              height={500}
               className="w-full rounded-image object-cover"
               alt="Relume placeholder image"
             />

@@ -107,14 +107,14 @@ export function Navbar1() {
               size="lg"
               className="w-full font-sans text-base font-normal px-6 py-2 rounded-full border-2 border-[#35543C] bg-transparent text-white hover:bg-[#1a3a25] transition"
             >
-              Quote
+              <Link href="tel:3058016781">Quote</Link>
             </Button>
             <Button
               title="Learn More"
               size="lg"
               className="w-full font-sans text-base font-semibold px-6 py-2 rounded-full bg-[#2E8B57] shadow-[0_4px_0_0_#217346] text-white hover:bg-[#217346] transition"
             >
-              Learn More
+              <Link href="/about-us">Learn More</Link>
             </Button>
           </div>
         </motion.div>
